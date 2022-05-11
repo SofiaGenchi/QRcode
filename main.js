@@ -38,7 +38,7 @@ const h2 = document.querySelector('h2');
 
 qrWiFi.addEventListener('click', () => {
     h2.innerText = 'WiFiQR...'
-    p.innerText = 'Enter network and password'
+    p.innerText = 'Enter SSID and password'
     wifiQr.classList.add('active')
     qrWiFi.classList.add('oculto')
     qrInput.classList.add('oculto');
