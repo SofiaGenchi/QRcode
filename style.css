@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,200&family=Ubuntu:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #252839;
+}
+
+.wrapper{
+    height: 340px;
+    background: #fff;
+    max-width: 410px;
+    border-radius: 7px;
+    padding: 16px 25px;
+    transition: height 0.2 ease;
+}
+.wrapper.active{
+    height: 610px;
+}
+.ssid.active, .password.active, .qrWifi.active{
+    display: inline-block;
+}
+.header h2{
+    font-size: 21px;
+    font-weight: 500;
+}
+.header p{
+    margin-top: 5px;
+    color: gray;
+    font-size: 16px;
+}
+.wrapper .form{
+    margin: 20px 0 25px;
+}
+.form :where(input, button){
+    width: 100%;
+    height: 45px;
+    margin: 2px 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.form input{
+    font-size: 18px;
+    padding: 0 17px;
+    border: 1px solid #999;
+}
+.form button{
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+    background: orangered;
+}
+.wrapper .qr-code{
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    padding: 33px 0;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    flex-direction: column;
+}
+.wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5 0.5s ease;
+}
+.qr-code button{
+    margin-top: 20px;
+}
+.title h1{
+    margin-right: 50px;
+    position: relative;
+    font-size: 5vw;
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.title a{
+    text-decoration: none;
+}
+.title h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: orangered;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 4px solid orangered;
+    overflow: hidden;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%, 10%, 40%, 50%, 60%, 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+}
+.oculto{
+    display: none;
+}
+.wifi{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.qrWifi{
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+    background: orangered;
+}
+.btn{
+    width: 120px;
+    position: relative;
+    margin: 0 11px;
+    padding: 5px 0;
+    background: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border: .5px solid orangered;
+}
+.btn:hover{
+    transition: 0.2s ease-in;
+    background-color: orangered;
+    color: black;
+}
