@@ -69,7 +69,6 @@ body{
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ccc;
     flex-direction: column;
 }
 .wrapper.active .qr-code{
