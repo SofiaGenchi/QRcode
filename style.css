@@ -141,3 +141,9 @@ body{
     background-color: orangered;
     color: black;
 }
+@media (max-width: 600px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+}
